@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Aggiungi Buca</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Inserisci le statistiche per la Buca {{ current_round['holes'] | length + 1 }}</h2>
+        <form method="POST">
+            <input type="hidden" name="hole_number" value="{{ current_round['holes'] | length + 1 }}">
+
+            <label for="fairway_hit">Fairway Hit:</label>
+            <input type="number" name="fairway_hit" value="0" min="0" max="1" required><br>
+
+            <label for="green_in_regulation">Green in Regulation:</label>
+            <input type="number" name="green_in_regulation" value="0" min="0" max="1" required><br>
+
+            <label for="putts">Numero di Putt:</label>
+            <input type="number" name="putts" value="0" min="0" required><br>
+
+            <label for="penalties">Penalità:</label>
+            <input type="number" name="penalties" value="0" min="0" required><br>
+
+            <label for="par">Par della Buca:</label>
+            <select name="par" required>
+                <option value="3">Par 3</option>
+                <option value="4">Par 4</option>
+                <option value="5">Par 5</option>
+            </select><br>
+
+            <label for="strokes">Colpi:</label>
+            <input type="number" name="strokes" value="0" min="0" required><br>
+
+            <button type="submit">Aggiungi Statistiche</button>
+        </form>
+        <a href="/">Torna alla Home</a>
+    </div>
+</body>
+</html>
