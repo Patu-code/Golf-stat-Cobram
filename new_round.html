@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Nuovo Round</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Inizia un Nuovo Round</h2>
+        <form method="POST">
+            <label for="num_holes">Numero di buche:</label>
+            <select name="num_holes" required>
+                <option value="9">9 Buche</option>
+                <option value="18">18 Buche</option>
+            </select>
+            <button type="submit">Avanti</button>
+        </form>
+        <a href="/">Torna alla Home</a>
+    </div>
+</body>
+</html>
+
+
