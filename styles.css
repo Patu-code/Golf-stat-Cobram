@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Carattere più simpatico */
+    background-color: #2C2C2C; /* Colore di sfondo scuro */
+    color: #6c6c6c; /* Colore del testo chiaro */
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    color: #317974; /* Colore primario per i titoli */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #dafedd; /* Colore secondario per il contenitore */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s; /* Effetto di hover */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="number"], select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none; /* Rimuoviamo il bordo di default */
+    border-radius: 5px;
+    background-color: #FFFFFF; /* Colore di sfondo dei campi */
+    color: #333; /* Colore del testo nei campi */
+}
+
+button {
+    padding: 10px;
+    background-color: #76C7C0; /* Colore primario per i pulsanti */
+    color: #2C2C2C; /* Testo scuro per i pulsanti */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #66B4B0; /* Colore più scuro al passaggio del mouse */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #76C7C0; /* Colore primario per le intestazioni */
+    color: #2C2C2C; /* Testo scuro per le intestazioni */
+}
