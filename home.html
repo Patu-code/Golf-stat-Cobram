@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Ciao Cobram! Benvenuto nella tua App di Golf</h2>
+        <a href="/new-round">Inizia un nuovo round</a>
+        <h3>Round Registrati</h3>
+        {% if rounds %}
+            <ul>
+                {% for round in rounds %}
+                    <li>Round di {{ round.num_holes }} buche - Data: {{ round.start_date }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nessun round registrato.</p>
+        {% endif %}
+        <a href="/stats">Visualizza Statistiche</a>
+    </div>
+</body>
+</html>
+
